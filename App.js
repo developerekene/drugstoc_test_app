@@ -8,6 +8,7 @@ import Dashboard from './src/screens/Dashboard';
 import DrugstockCreditOne from './src/screens/drugstoc_credit_one';
 import DrugstockCreditThree from './src/screens/drugstoc_credit_three';
 import DrugstockCreditTwo from './src/screens/drugstoc_credit_two';
+import SecureScreenOne from './src/screens/Secure_Screen_One';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -31,7 +32,7 @@ export default function App() {
       {/* <DrugstockCreditThree /> */}
       {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
-      <OrganizerApp />
+      <SecureScreenOne />
     </SafeAreaProvider>
   );
 }
