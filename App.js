@@ -2,10 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts, Inter_900Black, Inter_500Medium, Inter_600SemiBold, Inter_400Regular } from '@expo-google-fonts/inter';
+
+import OrganizerApp from "./OrganizerApp";
 import Dashboard from './src/screens/Dashboard';
-import DrugstockCreditOne from './drugstoc_credit_one';
-import DrugstockCreditThree from './drugstoc_credit_three';
-import DrugstockCreditTwo from './drugstoc_credit_two';
+import DrugstockCreditOne from './src/screens/drugstoc_credit_one';
+import DrugstockCreditThree from './src/screens/drugstoc_credit_three';
+import DrugstockCreditTwo from './src/screens/drugstoc_credit_two';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -25,7 +27,11 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <DrugstockCreditOne/>
+      <StatusBar style="auto" />
+      {/* <DrugstockCreditThree /> */}
+      {/* <DrugstockCreditTwo /> */}
+      {/* <DrugstockCreditOne /> */}
+      <OrganizerApp />
     </SafeAreaProvider>
   );
 }
