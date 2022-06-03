@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import DrugstockCreditOne from './drugstoc_credit_one';
 import DrugstockCreditThree from './drugstoc_credit_three';
 import DrugstockCreditTwo from './drugstoc_credit_two';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <DrugstockCreditThree/>
+      <DrugstockCreditOne/>
     </SafeAreaProvider>
   );
 }
