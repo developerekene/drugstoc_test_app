@@ -88,7 +88,7 @@ const SecureScreenTwo = () => {
                                              value={pin.first}
                                              onChangeText={(text)=> changePin(text, "first")}
                                              style={{
-                                                  width: 10
+                                                  textAlign: "center"
                                              }}
                                              />
                                    </View>
@@ -110,7 +110,7 @@ const SecureScreenTwo = () => {
                                              value={pin.second}
                                              onChangeText={(text)=> changePin(text, "second")}
                                              style={{
-                                                  width: 10
+                                                  textAlign: "center"
                                              }}
                                              />
                                    </View>
@@ -132,7 +132,7 @@ const SecureScreenTwo = () => {
                                              value={pin.third}
                                              onChangeText={(text)=> changePin(text, "third")}
                                              style={{
-                                                  width: 10
+                                                  textAlign: "center"
                                              }}
                                              />
                                    </View>
@@ -154,7 +154,7 @@ const SecureScreenTwo = () => {
                                              value={pin.fourth}
                                              onChangeText={(text)=> changePin(text, "fourth")}
                                              style={{
-                                                  width: 10
+                                                  textAlign: "center"
                                              }}
                                              />
                                    </View>
