@@ -4,7 +4,7 @@ import { EvilIcons } from '@expo/vector-icons';
 import React, { useState } from "react";
 import ColorPalette from "../constants/ColorPalette";
 
-const SecureScreenThree = () => {
+const SecureScreenThree = ({ navigation }) => {
      let [pin, updatePin] = useState({
           first: "0",
           second: "0",
@@ -18,40 +18,16 @@ const SecureScreenThree = () => {
      }
 
      return(
-          <SafeAreaView style={{
-               flex: 1
+          <View style={{
+               flex: 1,
+               backgroundColor: "#FFF"
           }}>
-               <View style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-               }}>
-                    <Text style={{
-                         fontSize: 17,
-                         fontFamily: "Inter_500Medium",
-                         textAlign: "center",
-                    }}>
-                         Security
-                    </Text>
-                    <View style={{
-                         position: "absolute",
-                         top: 0,
-                         right: 0,
-                         paddingRight: 10,
-                    }}>
-                         <EvilIcons name="close" size={24} color="black" />
-                    </View>
-               </View>
 
                <View style={{
                     flex: 1,
                     justifyContent: "space-between"
                }}>
                     <View>
-                         <View style={{
-                              marginVertical: 20,
-                              height: 1,
-                              backgroundColor: "#E2E2E2B2"
-                         }} />
 
                          <View style={{
                               justifyContent: "center",
@@ -203,7 +179,9 @@ const SecureScreenThree = () => {
                          </View>
                          <TouchableHighlight
                               underlayColor="#2B4386"
-                              onPress={() => {}}
+                              onPress={() => {
+                                   navigation.navigate("SecureScreenOne")
+                              }}
                               style={{
                                    backgroundColor: "#4B70D6",
                                    height: 48,
@@ -220,7 +198,7 @@ const SecureScreenThree = () => {
                          </TouchableHighlight>
                     </View>
                </View>
-          </SafeAreaView>
+          </View>
           
      )
 }
