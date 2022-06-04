@@ -49,8 +49,8 @@ export default function App() {
           <StatusBar style="auto" />
           <SafeAreaView style={{ width: "100%", height: "100%" }}>
             {/* <DrugstockCreditOne /> */}
-            {/* <DrugstockCreditThree /> */}
             {/* <DrugstockCreditTwo /> */}
+            {/* <DrugstockCreditThree /> */}
             {/* <SecureScreenFour /> */}
             {/* <SecureScreenOne /> */}
             {/* <SecureScreenTwo /> */}
@@ -62,6 +62,9 @@ export default function App() {
             {/* <SecureScreenFive /> */}
             {/* <SecureScreenSeven /> */}
             {/* <SecureScreenNine /> */}
+
+
+
             <Stack.Navigator>
               <Stack.Screen
                 name="BottomNavigation"
@@ -74,6 +77,11 @@ export default function App() {
                   header: ({navigation}) => {
                     return <GoBack navigation={navigation} />
                   } 
+                }}/>
+              
+              <Stack.Screen name="DrugstockCreditTwo" component={DrugstockCreditTwo} 
+                options={{
+                  headerShown: false
                 }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}
