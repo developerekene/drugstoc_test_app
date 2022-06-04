@@ -15,6 +15,7 @@ import SecureScreenFour from './src/screens/Secure_Screen_Four';
 import SecureScreenEight from './src/screens/Secure_Screen_Eight';
 import SecureScreenNine from './src/screens/Secure_Screen_Nine';
 import SecureScreenTen from './src/screens/Secure_Screen_Ten';
+import SecureScreenFive from './src/screens/Secure_Screen_Five';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
