@@ -53,7 +53,7 @@ const DrugstockCreditThree = ({ navigation }) => {
                          <TouchableHighlight
                               underlayColor="#b5363b"
                               onPress={() => {
-                                   navigation.navigate("SecureScreenOne")
+                                   navigation.navigate("BottomNavigation")
                               }}
                               style={{
                                    backgroundColor: "#DB353A",
