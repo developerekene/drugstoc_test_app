@@ -1,10 +1,12 @@
 import { StyleSheet, View } from 'react-native';
+import BottomNavigation from './src/navigators/BottomNavigation';
 import Dashboard from './src/screens/Dashboard';
 
 export default function App() {
   return (
     <View style={styles.container}>
-        <Dashboard />
+        {/* <Dashboard /> */}
+        <BottomNavigation />
     </View>
   );
 }

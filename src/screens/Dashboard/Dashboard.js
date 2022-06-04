@@ -34,7 +34,7 @@ const accounts = [
 
 export default function Dashboard() {
   return (
-    <SafeAreaView style={{ width: "100%", height: "100%",}}>
+    <View style={{ width: "100%", height: "100%", backgroundColor: "#fff"}}>
         <View style={styles.dashboardContainer}>
             <View style={styles.dashboardHeader}>
                 <Text style={styles.welcomeText}>
@@ -137,7 +137,7 @@ export default function Dashboard() {
                 </View>
             </ScrollView>
         </View>
-    </SafeAreaView>
+    </View>
   )
 }
 
