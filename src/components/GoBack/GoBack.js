@@ -6,7 +6,7 @@ import Constants from 'expo-constants';
 function GoBack({ navigation, title = "", back=true, close=false }) {
     return (
         
-            <View style={[styles.toolbar, {borderBottomColor: "#E2E2E2B2", borderBottomWidth: 1}]}>
+            <View style={[styles.toolbar, { marginTop: Constants.statusBarHeight, borderBottomColor: "#E2E2E2B2", borderBottomWidth: 1}]}>
                 {
                     back && <TouchableWithoutFeedback onPress={() => {
                         navigation.goBack()

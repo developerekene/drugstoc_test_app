@@ -4,42 +4,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import FingerPrintIcon from "../components/FingerPrintIcon";
 import ColorPalette from "../constants/ColorPalette";
 
-const SecureScreenSeven = () => {
+const SecureScreenSeven = ({ navigation }) => {
      return(
-          <SafeAreaView style={{
-               flex: 1
-          }}>
-               <View style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-               }}>
-                    <Text style={{
-                         fontSize: 17,
-                         fontFamily: "Inter_500Medium",
-                         textAlign: "center",
-                    }}>
-                         Security
-                    </Text>
-                    <View style={{
-                         position: "absolute",
-                         top: 0,
-                         right: 0,
-                         paddingRight: 10,
-                    }}>
-                         <EvilIcons name="close" size={24} color="black" />
-                    </View>
-               </View>
-
+          <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
                <View style={{
                     flex: 1,
-                    justifyContent: "space-between"
+                    justifyContent: "space-between",
                }}>
                     <View style={{flex: 1}}>
-                         <View style={{
-                              marginVertical: 20,
-                              height: 1,
-                              backgroundColor: "#E2E2E2B2"
-                         }} />
 
                          <View>
                               <Text style={{
@@ -98,7 +70,9 @@ const SecureScreenSeven = () => {
                     }}>
                          <TouchableHighlight
                               underlayColor="#2B4386"
-                              onPress={() => {}}
+                              onPress={() => {
+                                   navigation.navigate("SecureScreenOne")
+                              }}
                               style={{
                                    backgroundColor: "#4B70D6",
                                    height: 48,
@@ -115,7 +89,6 @@ const SecureScreenSeven = () => {
                          </TouchableHighlight>
                     </View>
                </View>
-
           </SafeAreaView>
           
      )

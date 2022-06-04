@@ -2,7 +2,12 @@ import { ImageBackground, View, Text, Image, TouchableHighlight } from "react-na
 import { SafeAreaView } from "react-native-safe-area-context"
 
 
-const SecureScreenSix = () => {
+const SecureScreenSix = ({ navigation }) => {
+
+     setTimeout(() => {
+          navigation.navigate("SecureScreenSeven")
+     }, 5000);
+
      return(
           <ImageBackground source={require("../../assets/jason-yoder.png")} resizeMode="cover"
                style={{
@@ -30,7 +35,9 @@ const SecureScreenSix = () => {
                     }}>
                          <TouchableHighlight
                               underlayColor="#00000010"
-                              onPress={() => {}}
+                              onPress={() => {
+                                   navigation.navigate("SecureScreenFour")
+                              }}
                               style={{
                                    borderColor: "#fff",
                                    borderWidth: 3,

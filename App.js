@@ -46,19 +46,12 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar style="auto" />
         <SafeAreaProvider style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
-          <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
+          {/* <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}> */}
 
             {/* <SecureScreenOne /> */}
-            {/* <SecureScreenTwo /> */}
-            {/* <SecureScreenThree /> */}
-            {/* <SecureScreenFour /> */}
-            {/* <SecureScreenTen /> */}
             {/* <SecureScreenEight /> */}
             {/* <SecureScreenNine /> */}
-            {/* <SecureScreenSix/> */}
-            {/* <SecureScreenFive /> */}
-            {/* <SecureScreenSeven /> */}
-            {/* <SecureScreenNine /> */}
+            {/* <SecureScreenTen /> */}
 
 
 
@@ -106,9 +99,54 @@ export default function App() {
                     return <GoBack navigation={navigation} title="Security" close={true} back={false} />
                   }
                 }}/>
+              
+              <Stack.Screen name="SecureScreenFour" component={SecureScreenFour} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={true} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenFive" component={SecureScreenFive} 
+                options={{
+                  headerShown: false
+                }}/>
+              
+              <Stack.Screen name="SecureScreenSix" component={SecureScreenSix} 
+                options={{
+                  headerShown: false
+                }}/>
+              
+              <Stack.Screen name="SecureScreenSeven" component={SecureScreenSeven} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenEight" component={SecureScreenEight} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={true} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenNine" component={SecureScreenNine} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={false} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenTen" component={SecureScreenTen} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
+                }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}
-          </SafeAreaView>
+          {/* </SafeAreaView> */}
         </SafeAreaProvider>
       </View>
     </NavigationContainer>
