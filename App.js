@@ -13,6 +13,7 @@ import SecureScreenTwo from './src/screens/Secure_Screen_Two';
 import SecureScreenThree from './src/screens/Secure_Screen_Three';
 import SecureScreenFour from './src/screens/Secure_Screen_Four';
 import SecureScreenEight from './src/screens/Secure_Screen_Eight';
+import SecureScreenNine from './src/screens/Secure_Screen_Nine';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -37,7 +38,7 @@ export default function App() {
       {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
       {/* <SecureScreenFour /> */}
-      <SecureScreenOne />
+      <SecureScreenNine />
       {/* <OrganizerApp /> */}
     </SafeAreaProvider>
   );
