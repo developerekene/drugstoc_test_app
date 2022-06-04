@@ -1,86 +1,79 @@
 import {View, Text, TouchableHighlight, Image, TextInput} from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context";
+import ColorPalette from "../constants/ColorPalette";
 
 const SecureScreenNine = () => {
      return(
-          <>
-          <View style={{
-               marginTop: 40,
-               paddingLeft: 15,
-               alignItems: "center"
-          }}>
-               <Text style={{
-                    fontSize: 17,
-                    fontWeight: "400",
-
-               }}>
-                    Security
-               </Text>
-          </View>
-
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image source={require("../../assets/Vector10.png")}/>
-          </View>
-          
+          <SafeAreaView style={{flex: 1}}>
                <View style={{
-               alignItems: "center",
-               // marginLeft: 110,
-               marginTop: 220
-          }}>
-               <Image source={require("../../assets/animation50.png")}/>
-               
-          </View>
-          
-          <View style={{
-               alignItems: "center",
-               marginTop: 0
-          }}>
-               
-               
-          </View>
-          <View style={{
-               alignItems: "center",
-               paddingTop: 80
-          }}>
-               <Text style={{
-                    fontWeight: "600",
-                    fontSize: 18,
-                    color: "#979797",
-                    marginTop: 60
-               }}>
-                    Touch the fingerpring sensor
-               </Text>
-          </View>
-          <View>
-          <TouchableHighlight
-                    style={{ marginTop: 20, alignSelf: "stretch"}}>
-                    <View
-                      style={{
-                        backgroundColor: "#4B70D6",
-                        height: 68,
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginLeft: 20,
-                        marginRight: 20,
-                        borderRadius: 40
-                      }}
-                    >
-                      <Text style={{ color: "#FFF"}}>
-                        GET STARED
-                      </Text>
-                    </View>
-          </TouchableHighlight>
-          </View>
-          <View style={{
-               marginTop: 10,
-               alignItems: "center"
-          }}>
-               <Image source={require("../../assets/HomeIndicator.png")}/>
-          </View>
+                         justifyContent: "center",
+                         alignItems: "center",
+                    }}>
+                    <Text style={{
+                         fontSize: 17,
+                         fontFamily: "Inter_500Medium",
+                         textAlign: "center",
+                    }}>
+                         Security
+                    </Text>
+               </View>
 
-          </>
-          
+               <View style={{
+                    flex: 1,
+                    justifyContent: "space-between"
+               }}>
+                    <View style={{flex: 1}}>
+                         <View style={{
+                              marginVertical: 20,
+                              height: 1,
+                              backgroundColor: "#E2E2E2B2"
+                         }} />
+                         
+                         <View style={{
+                              flex: 1,
+                              alignItems: "center",
+                              justifyContent: "center",
+                              paddingVertical: 50,
+                         }}>
+                              <Image source={require("../../assets/animation50.png")}/>
+                         </View>
+                    </View>
+
+                    <View style={{
+                         padding: 10
+                    }}>
+                         <View style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              paddingVertical: 10
+                         }}>
+                              <Text style={{
+                                   fontSize: 13,
+                                   lineHeight: 25,
+                                   fontFamily: "Inter_500Medium",
+                                   color: ColorPalette.textSecondaryColor
+                              }}>Touch the fingerprint sensor</Text>
+                         </View>
+                         <TouchableHighlight
+                              underlayColor="#2B4386"
+                              onPress={() => {}}
+                              style={{
+                                   backgroundColor: "#4B70D6",
+                                   height: 48,
+                                   justifyContent: "center",
+                                   alignItems: "center",
+                                   borderRadius: 20
+                              }}
+                              >
+                              <View>
+                                   <Text style={{ color: "#FFF"}}>
+                                        CANCEL 
+                                   </Text>
+                              </View>
+                         </TouchableHighlight>
+                    </View>
+               </View>
+          </SafeAreaView>
      )
 }
 
