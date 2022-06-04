@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PagerView from 'react-native-pager-view';
@@ -123,18 +123,22 @@ export default function Dashboard({ stackNavigation }) {
                             ItemSeparatorComponent={() => <View style={{width: "100%", height: 1, backgroundColor: "#E4E4E499"}} />}/>  
                     </View>
                     <View style={{padding: 10}}>
-                        <View style={styles.dashboardBottomBanner}>
-                            <View style={{flexDirection: "row", flex: 1, alignItems: "center"}}>
-                                <MobileSecurityIcon />
-                                <View style={{flex: 1, marginHorizontal: 5, justifyContent: "center",}}>
-                                    <Text style={{fontFamily: "Inter_500Medium", fontSize: 16}}>Add an Extra Layer of Security</Text>
-                                    <Text style={{fontFamily: "Inter_400Regular", fontSize: 13, flexShrink: 1 }}>make sure no one uses your account to make transcations without you knowing.</Text>
+                        <TouchableWithoutFeedback onPress={() => {
+                            stackNavigation.navigate("SecureScreenOne")
+                        }}>
+                            <View style={styles.dashboardBottomBanner}>
+                                <View style={{flexDirection: "row", flex: 1, alignItems: "center"}}>
+                                    <MobileSecurityIcon />
+                                    <View style={{flex: 1, marginHorizontal: 5, justifyContent: "center",}}>
+                                        <Text style={{fontFamily: "Inter_500Medium", fontSize: 16}}>Add an Extra Layer of Security</Text>
+                                        <Text style={{fontFamily: "Inter_400Regular", fontSize: 13, flexShrink: 1 }}>make sure no one uses your account to make transcations without you knowing.</Text>
+                                    </View>
+                                </View>
+                                <View style={{width: 27, height: 27, backgroundColor: "#B2CDE3", borderRadius: 50, justifyContent: "center", alignItems: "center"}}>
+                                    <EvilIcons name="chevron-right" size={24} color="black" />
                                 </View>
                             </View>
-                            <View style={{width: 27, height: 27, backgroundColor: "#B2CDE3", borderRadius: 50, justifyContent: "center", alignItems: "center"}}>
-                                <EvilIcons name="chevron-right" size={24} color="black" />
-                            </View>
-                        </View>
+                        </TouchableWithoutFeedback>
                     </View>
                 </View>
             </ScrollView>
