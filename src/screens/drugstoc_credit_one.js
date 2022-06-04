@@ -136,9 +136,9 @@ const DrugstockCreditOne = () => {
                               }}
                               >
                               <View>
-                              <Text style={{ color: "#FFF"}}>
-                              NOTIFY ME
-                              </Text>
+                                   <Text style={{ color: "#FFF"}}>
+                                   NOTIFY ME
+                                   </Text>
                               </View>
                          </TouchableHighlight>
                     </View>
