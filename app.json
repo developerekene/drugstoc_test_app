@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "drugstoc_test",
-    "slug": "drugstoc_test",
+    "name": "drugstoc_test_ekene",
+    "slug": "drugstoc_test_ekene",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
