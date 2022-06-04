@@ -1,149 +1,151 @@
-import { TouchableHighlight, View, Image, Text, TextInput } from "react-native"
+import { TouchableHighlight, View, Image, Text, TextInput } from "react-native";
+import { EvilIcons } from '@expo/vector-icons';
+import { SafeAreaView } from "react-native-safe-area-context";
+import ColorPalette from "../constants/ColorPalette";
 
 
 const DrugstockCreditOne = () => {
      return(
-          <>
-          <TouchableHighlight>
+          <SafeAreaView style={{
+               flex: 1
+          }}>
                <View style={{
-                    marginTop: 50,
-                    marginLeft: 10
+                    paddingLeft: 10,
+                    paddingVertical: 10
                }}>
-                    <Image source={require("../../assets/leftarrow.png")}/>
+                    <EvilIcons name="chevron-left" size={24} color="#999999" />
                </View>
-          </TouchableHighlight>
 
-          <View style={{
-               marginTop: 30,
-               marginLeft: 60,
-               marginRight: 60,
-          }}>
-               <Text style={{
-                    textAlign: "center",
-                    lineHeight: 22.11,
-                    fontWeight: "300",
-                    letterSpacing: 0.5
-               }}>
-                    Thank you for showing Interest in Drugstoc-Sterling loan
-               </Text>
-          </View>
-          <View style={{
-               marginLeft: 10,
-               marginTop: 25
-          }}>
-               <Text style={{
-                    fontSize: 13,
-                    paddingLeft: 15,
-                    lineHeight: 18,
-                    color: "#484848"
-               }}>
-                    Provide Details
-               </Text>
+               <View style={{ flex: 1, justifyContent: "space-between" }}>
+                    <View style={{flex: 1}}>
+                         <View style={{
+                              paddingVertical: 30,
+                              justifyContent: "center",
+                              alignItems: "center"
+                         }}>
+                              <Text style={{
+                                   width: "50%",
+                                   color: "#61656A",
+                                   textAlign: "center",
+                                   fontFamily: "Inter_500Medium",
+                                   fontSize: 13,
+                                   flexShrink: 1
+                              }}>
+                              Thank You for showing interest in Drugstoc-Sterling loan.
+                              </Text>
+                         </View>
 
-               <TextInput 
-               placeholder="NGN"
-               style={{
-                    borderWidth: 0.5,
-                    height: 60,
-                    borderColor: "#4B70D6",
-                    marginTop: 25,
-                    marginStart: 15,
-                    marginEnd: 25,
-                    paddingLeft: 20,
-                    borderRadius: 8,
-               }}>
-                    {/* <Text style={{
-                         paddingRight: 15
-                    }}>
-                         NGN
-                    </Text> */}
-               </TextInput>
+                         <View style={{
+                              paddingHorizontal: 10,
+                         }}>
+                              <Text style={{
+                                   fontSize: 13,
+                                   color: ColorPalette.textSecondaryColor,
+                                   fontFamily: "Inter_500Medium",
+                              }}>
+                                   Provide Details
+                              </Text>
 
-               <TextInput 
-               placeholder="2 Months"
-               style={{
-                    borderWidth: 0.5,
-                    height: 60,
-                    borderColor: "#4B70D6",
-                    marginTop: 25,
-                    marginStart: 15,
-                    marginEnd: 25,
-                    paddingLeft: 20,
-                    borderRadius: 8,
-               }}>
-                    {/* <Text style={{
-                         paddingRight: 15
-                    }}>
-                         NGN
-                    </Text> */}
-               </TextInput>
-               <TextInput 
-               placeholder="Restock"
-               style={{
-                    borderWidth: 0.5,
-                    height: 60,
-                    borderColor: "#4B70D6",
-                    marginTop: 25,
-                    marginStart: 15,
-                    marginEnd: 25,
-                    paddingLeft: 20,
-                    borderRadius: 8,
-               }}>
-                    {/* <Text style={{
-                         paddingRight: 15
-                    }}>
-                         NGN
-                    </Text> */}
-               </TextInput>
-               <TextInput 
-               placeholder="Emter your BVN (Optional)"
-               style={{
-                    borderWidth: 0.5,
-                    height: 60,
-                    borderColor: "#DDDDDD",
-                    marginTop: 25,
-                    marginStart: 15,
-                    marginEnd: 25,
-                    paddingLeft: 20,
-                    borderRadius: 8,
-               }}>
-                    {/* <Text style={{
-                         paddingRight: 15
-                    }}>
-                         NGN
-                    </Text> */}
-               </TextInput>
-          </View>
+                              <View style={{
+                                   flexDirection: "row",
+                                   justifyContent: "space-between",
+                                   borderWidth: 0.5,
+                                   borderColor: "#4B70D6",
+                                   borderRadius: 8,
+                                   padding: 15,
+                                   marginTop: 20,
+                                   marginBottom: 20
+                              }}>
+                                   <Text style={{
+                                        color: ColorPalette.textSecondaryColor,
+                                        fontFamily: "Inter_500Medium",
+                                        fontSize: 14
+                                   }}>NGN</Text>
+                                   <TextInput 
+                                   placeholder="3,000 000"
+                                   style={{
+                                        flex: 1,
+                                        marginLeft: 10
+                                   }}/>
+                              </View>
 
-          <View>
-               <TouchableHighlight
-                    style={{ marginTop: 80, alignSelf: "stretch"}}>
-                    <View
-                      style={{
-                        backgroundColor: "#DB353A",
-                        height: 48,
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginLeft: 20,
-                        marginRight: 20,
-                        borderRadius: 20
-                      }}
-                    >
-                      <Text style={{ color: "#FFF"}}>
-                        NOTIFY ME
-                      </Text>
+                              <View style={{
+                                   flexDirection: "row",
+                                   justifyContent: "space-between",
+                                   alignItems: "center",
+                                   borderWidth: 0.5,
+                                   borderColor: "#4B70D6",
+                                   borderRadius: 8,
+                                   padding: 15,
+                                   marginBottom: 20
+                              }}>
+                                   <TextInput 
+                                   placeholder="2 Months"
+                                   style={{
+                                        flex: 1
+                                   }}/>
+                                   <EvilIcons name="chevron-down" size={24} color="#3F414E" />
+                              </View>
+
+                              <View style={{
+                                   flexDirection: "row",
+                                   justifyContent: "space-between",
+                                   alignItems: "center",
+                                   borderWidth: 0.5,
+                                   borderColor: "#4B70D6",
+                                   borderRadius: 8,
+                                   padding: 15,
+                                   marginBottom: 20
+                              }}>
+                                   <TextInput 
+                                   placeholder="Restock"
+                                   style={{
+                                        flex: 1
+                                   }}/>
+                                   <EvilIcons name="chevron-down" size={24} color="#3F414E" />
+                              </View>
+
+                              <View style={{
+                                   flexDirection: "row",
+                                   justifyContent: "space-between",
+                                   alignItems: "center",
+                                   borderWidth: 0.5,
+                                   borderColor: "#DDDDDD",
+                                   borderRadius: 8,
+                                   padding: 15,
+                                   marginBottom: 20
+                              }}>
+                                   <TextInput 
+                                   placeholder="Emter your BVN (Optional)" />
+                              </View>
+                         </View>
                     </View>
-                  </TouchableHighlight>
-          </View>
-          <View style={{
-               justifyContent: "center",
-               alignItems: "center",
-               marginTop: 10
-          }}>
-               <Image source={require('../../assets/HomeIndicator.png')}/>
-          </View>
+
+                    <View style={{
+                         padding: 10
+                    }}>
+                         <TouchableHighlight
+                              underlayColor="#b5363b"
+                              onPress={() => {}}
+                              style={{
+                                   backgroundColor: "#DB353A",
+                                   height: 48,
+                                   justifyContent: "center",
+                                   alignItems: "center",
+                                   borderRadius: 20
+                              }}
+                              >
+                              <View>
+                              <Text style={{ color: "#FFF"}}>
+                              NOTIFY ME
+                              </Text>
+                              </View>
+                         </TouchableHighlight>
+                    </View>
+               </View>
+
           
-          </>
+          </SafeAreaView>
           
      )
 }
