@@ -1,6 +1,6 @@
-import {View, Text, TouchableHighlight, Image, TextInput} from "react-native"
+import {View, Text, TouchableHighlight, Image} from "react-native"
 
-const SecureScreenSeven = () => {
+const SecureScreenTen = () => {
      return(
           <>
           <View style={{
@@ -42,18 +42,18 @@ const SecureScreenSeven = () => {
                     fontWeight: "600",
                     fontSize: 18
                }}>
-                    Setup face lock
+                    Setup fingerprint
                </Text>
           </View>
           
                <View style={{
                alignItems: "center",
                // marginLeft: 110,
-               marginTop: 30
+               marginTop: 80
           }}>
                <Image style={{
                     // borderRadius: "50%"
-               }}source={require("../../assets/profile.png")}/>
+               }}source={require("../../assets/smartphonenew2.png")}/>
                
           </View>
           
@@ -71,7 +71,8 @@ const SecureScreenSeven = () => {
                <Text style={{
                     fontWeight: "600",
                     fontSize: 18,
-                    color: "#068D68"
+                    color: "#068D68",
+                    marginTop: 20
                }}>
                     All Good!
                </Text>
@@ -82,12 +83,12 @@ const SecureScreenSeven = () => {
                     paddingRight: 40,
                     fontSize: 15
                }}>
-                    You can use face authentication to confirm making payments through the app.
+                    You can use your fingerprint to confirm making payments through the app.
                </Text>
           </View>
           <View>
           <TouchableHighlight
-                    style={{ marginTop: 180, alignSelf: "stretch"}}>
+                    style={{ marginTop: 130, alignSelf: "stretch"}}>
                     <View
                       style={{
                         backgroundColor: "#4B70D6",
@@ -117,4 +118,4 @@ const SecureScreenSeven = () => {
      )
 }
 
-export default SecureScreenSeven
+export default SecureScreenTen
