@@ -67,8 +67,7 @@ export default function Dashboard({ stackNavigation }) {
                                         <Text style={{fontSize: 15, fontFamily: "Inter_500Medium", color: ColorPalette.textPrimaryColor}}>From Invoice Date</Text>
                                     </View>
                                     <TouchableOpacity onPress={() => {
-                                        stackNavigation.navigate("DrugstockCreditOne")
-                                        console.log(stackNavigation);
+                                        stackNavigation.navigate("DrugstockCreditOne");
                                     }}>
                                         <View style={styles.viewPagerMakePurchaseBtn}>
                                             <View style={{backgroundColor: "#FFF", padding: 5, borderRadius: 50}}>

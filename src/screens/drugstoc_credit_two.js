@@ -1,11 +1,12 @@
 import {View, Image, Text, Button, TouchableHighlight} from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 
-const DrugstockCreditTwo = () => {
+const DrugstockCreditTwo = ({ navigation }) => {
      return(
-          <SafeAreaView style={{
+          <View style={{
                flex: 1,
-               justifyContent: "space-between"
+               justifyContent: "space-between",
+               backgroundColor: "#FFF"
           }}>
                <View style={{
                     flex: 1,
@@ -47,7 +48,9 @@ const DrugstockCreditTwo = () => {
                <View style={{padding: 10}}>
                     <TouchableHighlight
                          underlayColor="#b5363b"
-                         onPress={() => {}}
+                         onPress={() => {
+                              
+                         }}
                          style={{
                               backgroundColor: "#DB353A",
                               height: 48,
@@ -62,7 +65,7 @@ const DrugstockCreditTwo = () => {
                          </View>
                     </TouchableHighlight>
                </View>
-          </SafeAreaView>
+          </View>
      )
 }
 

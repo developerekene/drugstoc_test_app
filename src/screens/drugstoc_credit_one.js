@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import ColorPalette from "../constants/ColorPalette";
 
 
-const DrugstockCreditOne = () => {
+const DrugstockCreditOne = ({ navigation }) => {
      return(
           <View style={{
                flex: 1,
@@ -120,7 +120,9 @@ const DrugstockCreditOne = () => {
                     }}>
                          <TouchableHighlight
                               underlayColor="#b5363b"
-                              onPress={() => {}}
+                              onPress={() => {
+                                   navigation.navigate("DrugstockCreditTwo")
+                              }}
                               style={{
                                    backgroundColor: "#DB353A",
                                    height: 48,
