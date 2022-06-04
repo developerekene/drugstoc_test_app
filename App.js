@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts, Inter_900Black, Inter_500Medium, Inter_600SemiBold, Inter_400Regular } from '@expo-google-fonts/inter';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 import OrganizerApp from "./OrganizerApp";
 import Dashboard from './src/screens/Dashboard';
@@ -18,6 +21,9 @@ import SecureScreenTen from './src/screens/Secure_Screen_Ten';
 import SecureScreenFive from './src/screens/Secure_Screen_Five';
 import SecureScreenSix from './src/screens/Secure_Screen_Six';
 import SecureScreenSeven from './src/screens/Secure_Screen_Seven';
+import { NavigationContainer } from '@react-navigation/native';
+import BottomNavigation from './src/navigators/BottomNavigation';
+import GoBack from './src/components/GoBack/GoBack';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -36,24 +42,45 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <StatusBar style="auto" />
-      {/* <DrugstockCreditThree /> */}
-      {/* <DrugstockCreditTwo /> */}
-      {/* <DrugstockCreditOne /> */}
-      {/* <SecureScreenFour /> */}
-      {/* <SecureScreenOne /> */}
-      {/* <SecureScreenTwo /> */}
-      {/* <SecureScreenThree /> */}
-      {/* <SecureScreenTen /> */}
-      {/* <SecureScreenEight /> */}
-      {/* <SecureScreenNine /> */}
-      {/* <SecureScreenSix/> */}
-      {/* <SecureScreenFive /> */}
-      <SecureScreenSeven />
-      {/* <SecureScreenNine /> */}
-      {/* <OrganizerApp /> */}
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <SafeAreaProvider style={{ width: "100%", height: "100%" }}>
+          <StatusBar style="auto" />
+          <SafeAreaView style={{ width: "100%", height: "100%" }}>
+            {/* <DrugstockCreditOne /> */}
+            {/* <DrugstockCreditThree /> */}
+            {/* <DrugstockCreditTwo /> */}
+            {/* <SecureScreenFour /> */}
+            {/* <SecureScreenOne /> */}
+            {/* <SecureScreenTwo /> */}
+            {/* <SecureScreenThree /> */}
+            {/* <SecureScreenTen /> */}
+            {/* <SecureScreenEight /> */}
+            {/* <SecureScreenNine /> */}
+            {/* <SecureScreenSix/> */}
+            {/* <SecureScreenFive /> */}
+            {/* <SecureScreenSeven /> */}
+            {/* <SecureScreenNine /> */}
+            <Stack.Navigator>
+              <Stack.Screen
+                name="BottomNavigation"
+                component={BottomNavigation}
+                options={{ headerShown: false }}
+              />
+
+              <Stack.Screen name="DrugstockCreditOne" component={DrugstockCreditOne} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} />
+                  } 
+                }}/>
+            </Stack.Navigator>
+          {/* <OrganizerApp /> */}
+          </SafeAreaView>
+        </SafeAreaProvider>
+      </View>
+    </NavigationContainer>
   );
 }
 
