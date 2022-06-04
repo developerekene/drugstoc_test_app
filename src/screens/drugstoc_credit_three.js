@@ -4,9 +4,10 @@ import ColorPalette from "../constants/ColorPalette"
 
 const DrugstockCreditThree = () => {
      return(
-          <SafeAreaView style={{
+          <View style={{
                flex: 1,
-               justifyContent: "space-between"
+               justifyContent: "space-between",
+               backgroundColor: "#FFF"
           }}>
                <View style={{
                     flex: 1,
@@ -65,7 +66,7 @@ const DrugstockCreditThree = () => {
                          </View>
                     </TouchableHighlight>
                </View>
-          </SafeAreaView>
+          </View>
      )
 }
 

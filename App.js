@@ -83,6 +83,11 @@ export default function App() {
                 options={{
                   headerShown: false
                 }}/>
+              
+              <Stack.Screen name="DrugstockCreditThree" component={DrugstockCreditThree} 
+                options={{
+                  headerShown: false
+                }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}
           </SafeAreaView>

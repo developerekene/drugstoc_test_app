@@ -49,7 +49,7 @@ const DrugstockCreditTwo = ({ navigation }) => {
                     <TouchableHighlight
                          underlayColor="#b5363b"
                          onPress={() => {
-                              
+                              navigation.navigate("DrugstockCreditThree");
                          }}
                          style={{
                               backgroundColor: "#DB353A",
