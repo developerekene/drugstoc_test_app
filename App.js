@@ -46,7 +46,8 @@ export default function App() {
       {/* <SecureScreenThree /> */}
       {/* <SecureScreenTen /> */}
       {/* <SecureScreenEight /> */}
-      <SecureScreenSix/>
+      <SecureScreenNine />
+      {/* <SecureScreenSix/> */}
       {/* <SecureScreenNine /> */}
       {/* <OrganizerApp /> */}
     </SafeAreaProvider>
