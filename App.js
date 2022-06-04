@@ -11,6 +11,7 @@ import DrugstockCreditTwo from './src/screens/drugstoc_credit_two';
 import SecureScreenOne from './src/screens/Secure_Screen_One';
 import SecureScreenTwo from './src/screens/Secure_Screen_Two';
 import SecureScreenThree from './src/screens/Secure_Screen_Three';
+import SecureScreenFour from './src/screens/Secure_Screen_Four';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -34,7 +35,7 @@ export default function App() {
       {/* <DrugstockCreditThree /> */}
       {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
-      <SecureScreenThree />
+      <SecureScreenFour />
     </SafeAreaProvider>
   );
 }
