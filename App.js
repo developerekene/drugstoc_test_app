@@ -46,17 +46,15 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar style="auto" />
         <SafeAreaProvider style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
-          <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
+          {/* <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}> */}
 
             {/* <SecureScreenOne /> */}
-            {/* <SecureScreenTwo /> */}
-            {/* <SecureScreenThree /> */}
+            {/* <SecureScreenFive /> */}
             {/* <SecureScreenFour /> */}
             {/* <SecureScreenTen /> */}
             {/* <SecureScreenEight /> */}
             {/* <SecureScreenNine /> */}
             {/* <SecureScreenSix/> */}
-            {/* <SecureScreenFive /> */}
             {/* <SecureScreenSeven /> */}
             {/* <SecureScreenNine /> */}
 
@@ -106,9 +104,21 @@ export default function App() {
                     return <GoBack navigation={navigation} title="Security" close={true} back={false} />
                   }
                 }}/>
+              
+              <Stack.Screen name="SecureScreenFour" component={SecureScreenFour} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={true} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenFive" component={SecureScreenFive} 
+                options={{
+                  headerShown: false
+                }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}
-          </SafeAreaView>
+          {/* </SafeAreaView> */}
         </SafeAreaProvider>
       </View>
     </NavigationContainer>

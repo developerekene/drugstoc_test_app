@@ -19,175 +19,177 @@ const SecureScreenTwo = ({ navigation }) => {
      }
 
      return(
-          <View style={{
-               flex: 1,
-               backgroundColor: "#FFF"
-          }}>
-
+          <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
                <View style={{
                     flex: 1,
-                    justifyContent: "space-between"
+                    backgroundColor: "#FFF"
                }}>
-                    <View>
-
-                         <View style={{
-                              justifyContent: "center",
-                              alignItems: "center"
-                         }}>
-                              <Text style={{
-                                   textAlign: "center",
-                                   paddingVertical: 20,
-                                   color: "#181725",
-                                   fontFamily: "Inter_500Medium",
-                                   fontSize: 17,
-                              }}>
-                                   Secure with a pin
-                              </Text>
-                              <View style={{
-                                   flexDirection: "row",
-                                   justifyContent: "center"
-                              }}>
-                                   <View style={{
-                                        height: 45,
-                                        width: 45,
-                                        margin: 5,
-                                        borderWidth: 1,
-                                        borderColor: "#C4C4C4",
-                                        borderRadius: 8,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                   }}>
-                                        <TextInput 
-                                             secureTextEntry
-                                             keyboardType="default" 
-                                             maxLength={1}
-                                             value={pin.first}
-                                             onChangeText={(text)=> changePin(text, "first")}
-                                             style={{
-                                                  textAlign: "center"
-                                             }}
-                                             />
-                                   </View>
-
-                                   <View style={{
-                                        height: 45,
-                                        width: 45,
-                                        margin: 5,
-                                        borderWidth: 1,
-                                        borderColor: "#C4C4C4",
-                                        borderRadius: 8,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                   }}>
-                                        <TextInput 
-                                             secureTextEntry
-                                             keyboardType="default" 
-                                             maxLength={1}
-                                             value={pin.second}
-                                             onChangeText={(text)=> changePin(text, "second")}
-                                             style={{
-                                                  textAlign: "center"
-                                             }}
-                                             />
-                                   </View>
-
-                                   <View style={{
-                                        height: 45,
-                                        width: 45,
-                                        margin: 5,
-                                        borderWidth: 1,
-                                        borderColor: "#C4C4C4",
-                                        borderRadius: 8,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                   }}>
-                                        <TextInput 
-                                             secureTextEntry
-                                             keyboardType="default" 
-                                             maxLength={1}
-                                             value={pin.third}
-                                             onChangeText={(text)=> changePin(text, "third")}
-                                             style={{
-                                                  textAlign: "center"
-                                             }}
-                                             />
-                                   </View>
-
-                                   <View style={{
-                                        height: 45,
-                                        width: 45,
-                                        margin: 5,
-                                        borderWidth: 1,
-                                        borderColor: "#C4C4C4",
-                                        borderRadius: 8,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                   }}>
-                                        <TextInput 
-                                             secureTextEntry
-                                             keyboardType="default" 
-                                             maxLength={1}
-                                             value={pin.fourth}
-                                             onChangeText={(text)=> changePin(text, "fourth")}
-                                             style={{
-                                                  textAlign: "center"
-                                             }}
-                                             />
-                                   </View>
-                              </View>
-                         </View>
-                         
-                         <View style={{
-                              alignItems: "center",
-                              paddingVertical: 50
-                         }}>
-                              <Text style={{
-                                   textAlign: "center",
-                                   color: ColorPalette.textPrimaryColor,
-                                   fontFamily: "Inter_500Medium",
-                                   fontSize: 15,
-                                   width: "80%",
-                              }}>
-                                   Enter your pin to lock credit
-                              </Text>
-                              <Text style={{
-                                   paddingVertical: 20,
-                                   width: "80%",
-                                   textAlign: "center",
-                                   fontSize: 13,
-                                   fontFamily: "Inter_400Regular",
-                                   color: ColorPalette.textPrimaryColor
-                              }}>
-                                   You can use a pin authentication to confirm making payments through this app
-                              </Text>
-                         </View>
-                    </View>
 
                     <View style={{
-                         padding: 10
+                         flex: 1,
+                         justifyContent: "space-between"
                     }}>
-                         <TouchableHighlight
-                              underlayColor="#918787"
-                              onPress={() => {
-                                   navigation.navigate("SecureScreenThree");
-                              }}
-                              style={{
-                                   backgroundColor: "#979797",
-                                   height: 48,
+                         <View>
+
+                              <View style={{
                                    justifyContent: "center",
+                                   alignItems: "center"
+                              }}>
+                                   <Text style={{
+                                        textAlign: "center",
+                                        paddingVertical: 20,
+                                        color: "#181725",
+                                        fontFamily: "Inter_500Medium",
+                                        fontSize: 17,
+                                   }}>
+                                        Secure with a pin
+                                   </Text>
+                                   <View style={{
+                                        flexDirection: "row",
+                                        justifyContent: "center"
+                                   }}>
+                                        <View style={{
+                                             height: 45,
+                                             width: 45,
+                                             margin: 5,
+                                             borderWidth: 1,
+                                             borderColor: "#C4C4C4",
+                                             borderRadius: 8,
+                                             justifyContent: "center",
+                                             alignItems: "center",
+                                        }}>
+                                             <TextInput 
+                                                  secureTextEntry
+                                                  keyboardType="default" 
+                                                  maxLength={1}
+                                                  value={pin.first}
+                                                  onChangeText={(text)=> changePin(text, "first")}
+                                                  style={{
+                                                       textAlign: "center"
+                                                  }}
+                                                  />
+                                        </View>
+
+                                        <View style={{
+                                             height: 45,
+                                             width: 45,
+                                             margin: 5,
+                                             borderWidth: 1,
+                                             borderColor: "#C4C4C4",
+                                             borderRadius: 8,
+                                             justifyContent: "center",
+                                             alignItems: "center",
+                                        }}>
+                                             <TextInput 
+                                                  secureTextEntry
+                                                  keyboardType="default" 
+                                                  maxLength={1}
+                                                  value={pin.second}
+                                                  onChangeText={(text)=> changePin(text, "second")}
+                                                  style={{
+                                                       textAlign: "center"
+                                                  }}
+                                                  />
+                                        </View>
+
+                                        <View style={{
+                                             height: 45,
+                                             width: 45,
+                                             margin: 5,
+                                             borderWidth: 1,
+                                             borderColor: "#C4C4C4",
+                                             borderRadius: 8,
+                                             justifyContent: "center",
+                                             alignItems: "center",
+                                        }}>
+                                             <TextInput 
+                                                  secureTextEntry
+                                                  keyboardType="default" 
+                                                  maxLength={1}
+                                                  value={pin.third}
+                                                  onChangeText={(text)=> changePin(text, "third")}
+                                                  style={{
+                                                       textAlign: "center"
+                                                  }}
+                                                  />
+                                        </View>
+
+                                        <View style={{
+                                             height: 45,
+                                             width: 45,
+                                             margin: 5,
+                                             borderWidth: 1,
+                                             borderColor: "#C4C4C4",
+                                             borderRadius: 8,
+                                             justifyContent: "center",
+                                             alignItems: "center",
+                                        }}>
+                                             <TextInput 
+                                                  secureTextEntry
+                                                  keyboardType="default" 
+                                                  maxLength={1}
+                                                  value={pin.fourth}
+                                                  onChangeText={(text)=> changePin(text, "fourth")}
+                                                  style={{
+                                                       textAlign: "center"
+                                                  }}
+                                                  />
+                                        </View>
+                                   </View>
+                              </View>
+                              
+                              <View style={{
                                    alignItems: "center",
-                                   borderRadius: 20
-                              }}
-                              >
-                              <View>
-                                   <Text style={{ color: "#FFF"}}>
-                                        COMFIRM PIN
+                                   paddingVertical: 50
+                              }}>
+                                   <Text style={{
+                                        textAlign: "center",
+                                        color: ColorPalette.textPrimaryColor,
+                                        fontFamily: "Inter_500Medium",
+                                        fontSize: 15,
+                                        width: "80%",
+                                   }}>
+                                        Enter your pin to lock credit
+                                   </Text>
+                                   <Text style={{
+                                        paddingVertical: 20,
+                                        width: "80%",
+                                        textAlign: "center",
+                                        fontSize: 13,
+                                        fontFamily: "Inter_400Regular",
+                                        color: ColorPalette.textPrimaryColor
+                                   }}>
+                                        You can use a pin authentication to confirm making payments through this app
                                    </Text>
                               </View>
-                         </TouchableHighlight>
+                         </View>
+
+                         <View style={{
+                              padding: 10
+                         }}>
+                              <TouchableHighlight
+                                   underlayColor="#918787"
+                                   onPress={() => {
+                                        navigation.navigate("SecureScreenThree");
+                                   }}
+                                   style={{
+                                        backgroundColor: "#979797",
+                                        height: 48,
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        borderRadius: 20
+                                   }}
+                                   >
+                                   <View>
+                                        <Text style={{ color: "#FFF"}}>
+                                             COMFIRM PIN
+                                        </Text>
+                                   </View>
+                              </TouchableHighlight>
+                         </View>
                     </View>
                </View>
-          </View>
+          </SafeAreaView>
           
      )
 }

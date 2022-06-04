@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import FaceIdIcon80 from "../components/FaceIdIcon80"
 
 
-const SecureScreenFive = () => {
+const SecureScreenFive = ({ navigation }) => {
      return(
           <ImageBackground source={require("../../assets/jason-yoder.png")} resizeMode="cover"
                style={{
@@ -12,7 +12,6 @@ const SecureScreenFive = () => {
                     alignItems: "center",
                     width: "100%",
                     height: "100%",
-                    
                }}>
                <SafeAreaView style={{width: "100%", height: "100%", justifyContent: "space-between"}}>
                     <View style={{
