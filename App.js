@@ -32,8 +32,8 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="auto" />
-      {/* <DrugstockCreditThree /> */}
-      <DrugstockCreditTwo />
+      <DrugstockCreditThree />
+      {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
       {/* <SecureScreenFour /> */}
       {/* <OrganizerApp /> */}
