@@ -39,7 +39,9 @@ export default function App() {
       {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
       {/* <SecureScreenFour /> */}
-      <SecureScreenTen />
+      {/* <SecureScreenOne /> */}
+      <SecureScreenTwo />
+      {/* <SecureScreenTen /> */}
       {/* <OrganizerApp /> */}
     </SafeAreaProvider>
   );
