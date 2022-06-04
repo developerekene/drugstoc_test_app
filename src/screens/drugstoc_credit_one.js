@@ -6,16 +6,10 @@ import ColorPalette from "../constants/ColorPalette";
 
 const DrugstockCreditOne = () => {
      return(
-          <SafeAreaView style={{
-               flex: 1
+          <View style={{
+               flex: 1,
+               backgroundColor: "#FFF"
           }}>
-               <View style={{
-                    paddingLeft: 10,
-                    paddingVertical: 10
-               }}>
-                    <EvilIcons name="chevron-left" size={24} color="#999999" />
-               </View>
-
                <View style={{ flex: 1, justifyContent: "space-between" }}>
                     <View style={{flex: 1}}>
                          <View style={{
@@ -145,7 +139,7 @@ const DrugstockCreditOne = () => {
                </View>
 
           
-          </SafeAreaView>
+          </View>
           
      )
 }

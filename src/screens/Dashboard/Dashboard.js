@@ -32,7 +32,7 @@ const accounts = [
     },
 ]
 
-export default function Dashboard() {
+export default function Dashboard({ stackNavigation }) {
   return (
     <View style={{ width: "100%", height: "100%", backgroundColor: "#fff"}}>
         <View style={styles.dashboardContainer}>
@@ -66,7 +66,10 @@ export default function Dashboard() {
                                         <Text style={{fontSize: 12, fontFamily: "Inter_500Medium", color: ColorPalette.textPrimaryColor}}>Credit Repayment Due: </Text>
                                         <Text style={{fontSize: 15, fontFamily: "Inter_500Medium", color: ColorPalette.textPrimaryColor}}>From Invoice Date</Text>
                                     </View>
-                                    <TouchableOpacity>
+                                    <TouchableOpacity onPress={() => {
+                                        stackNavigation.navigate("DrugstockCreditOne")
+                                        console.log(stackNavigation);
+                                    }}>
                                         <View style={styles.viewPagerMakePurchaseBtn}>
                                             <View style={{backgroundColor: "#FFF", padding: 5, borderRadius: 50}}>
                                                 <AntDesign name="plus" size={10} color="black" />
