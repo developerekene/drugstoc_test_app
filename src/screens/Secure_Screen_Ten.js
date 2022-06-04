@@ -100,7 +100,7 @@ const SecureScreenTen = () => {
                               >
                               <View>
                                    <Text style={{ color: "#FFF"}}>
-                                        DONE
+                                        CANCEL
                                    </Text>
                               </View>
                          </TouchableHighlight>
