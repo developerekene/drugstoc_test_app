@@ -45,16 +45,13 @@ export default function App() {
     <NavigationContainer>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <SafeAreaProvider style={{ width: "100%", height: "100%" }}>
-          <StatusBar style="auto" />
-          <SafeAreaView style={{ width: "100%", height: "100%" }}>
-            {/* <DrugstockCreditOne /> */}
-            {/* <DrugstockCreditTwo /> */}
-            {/* <DrugstockCreditThree /> */}
-            {/* <SecureScreenFour /> */}
+        <SafeAreaProvider style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
+          <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}>
+
             {/* <SecureScreenOne /> */}
             {/* <SecureScreenTwo /> */}
             {/* <SecureScreenThree /> */}
+            {/* <SecureScreenFour /> */}
             {/* <SecureScreenTen /> */}
             {/* <SecureScreenEight /> */}
             {/* <SecureScreenNine /> */}
@@ -82,6 +79,32 @@ export default function App() {
               <Stack.Screen name="DrugstockCreditTwo" component={DrugstockCreditTwo} 
                 options={{
                   headerShown: false
+                }}/>
+              
+              <Stack.Screen name="DrugstockCreditThree" component={DrugstockCreditThree} 
+                options={{
+                  headerShown: false
+                }}/>
+              
+              <Stack.Screen name="SecureScreenOne" component={SecureScreenOne} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenTwo" component={SecureScreenTwo} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={true} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenThree" component={SecureScreenThree} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
                 }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}

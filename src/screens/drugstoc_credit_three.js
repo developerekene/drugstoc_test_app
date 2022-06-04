@@ -2,11 +2,12 @@ import {View, Image, Text, TouchableHighlight} from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import ColorPalette from "../constants/ColorPalette"
 
-const DrugstockCreditThree = () => {
+const DrugstockCreditThree = ({ navigation }) => {
      return(
-          <SafeAreaView style={{
+          <View style={{
                flex: 1,
-               justifyContent: "space-between"
+               justifyContent: "space-between",
+               backgroundColor: "#FFF"
           }}>
                <View style={{
                     flex: 1,
@@ -50,7 +51,9 @@ const DrugstockCreditThree = () => {
                <View style={{padding: 10}}>
                     <TouchableHighlight
                          underlayColor="#b5363b"
-                         onPress={() => {}}
+                         onPress={() => {
+                              navigation.navigate("SecureScreenOne")
+                         }}
                          style={{
                               backgroundColor: "#DB353A",
                               height: 48,
@@ -65,7 +68,7 @@ const DrugstockCreditThree = () => {
                          </View>
                     </TouchableHighlight>
                </View>
-          </SafeAreaView>
+          </View>
      )
 }
 
