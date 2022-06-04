@@ -1,118 +1,122 @@
 import {View, Text, TouchableHighlight, Image, TextInput} from "react-native"
+import { EvilIcons } from '@expo/vector-icons';
+import { SafeAreaView } from "react-native-safe-area-context";
+import FingerPrintIcon from "../components/FingerPrintIcon";
+import ColorPalette from "../constants/ColorPalette";
 
 const SecureScreenSeven = () => {
      return(
-          <>
-          <View style={{
-               marginTop: 40,
-               paddingLeft: 15,
-               alignItems: "center"
-          }}>
-               <Text style={{
-                    fontSize: 17,
-                    fontWeight: "400",
-
-               }}>
-                    Security
-               </Text>
-          </View>
-          <TouchableHighlight style={{
-               position: "absolute",
-               alignItems: "flex-end"
+          <SafeAreaView style={{
+               flex: 1
           }}>
                <View style={{
-                    marginTop: 46,
-                    marginLeft: 380,
+                    justifyContent: "center",
+                    alignItems: "center",
                }}>
-                    <Image source={require("../../assets/close1.png")}/>
-               </View>
-          </TouchableHighlight>
-
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image source={require("../../assets/Vector10.png")}/>
-          </View>
-
-          <View>
-               <Text style={{
-                    textAlign: "center",
-                    paddingTop: 25,
-                    color: "#181725",
-                    fontWeight: "600",
-                    fontSize: 18
-               }}>
-                    Setup face lock
-               </Text>
-          </View>
-          
-               <View style={{
-               alignItems: "center",
-               // marginLeft: 110,
-               marginTop: 30
-          }}>
-               <Image style={{
-                    // borderRadius: "50%"
-               }}source={require("../../assets/profile.png")}/>
-               
-          </View>
-          
-          <View style={{
-               alignItems: "center",
-               marginTop: 0
-          }}>
-               
-               
-          </View>
-          <View style={{
-               alignItems: "center",
-               paddingTop: 80
-          }}>
-               <Text style={{
-                    fontWeight: "600",
-                    fontSize: 18,
-                    color: "#068D68"
-               }}>
-                    All Good!
-               </Text>
-               <Text style={{
-                    paddingTop: 20,
-                    textAlign: "center",
-                    paddingLeft: 40,
-                    paddingRight: 40,
-                    fontSize: 15
-               }}>
-                    You can use face authentication to confirm making payments through the app.
-               </Text>
-          </View>
-          <View>
-          <TouchableHighlight
-                    style={{ marginTop: 180, alignSelf: "stretch"}}>
-                    <View
-                      style={{
-                        backgroundColor: "#4B70D6",
-                        height: 68,
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginLeft: 20,
-                        marginRight: 20,
-                        borderRadius: 40
-                      }}
-                    >
-                      <Text style={{ color: "#FFF"}}>
-                        DONE
-                      </Text>
+                    <Text style={{
+                         fontSize: 17,
+                         fontFamily: "Inter_500Medium",
+                         textAlign: "center",
+                    }}>
+                         Security
+                    </Text>
+                    <View style={{
+                         position: "absolute",
+                         top: 0,
+                         right: 0,
+                         paddingRight: 10,
+                    }}>
+                         <EvilIcons name="close" size={24} color="black" />
                     </View>
-          </TouchableHighlight>
-          </View>
-          <View style={{
-               marginTop: 10,
-               alignItems: "center"
-          }}>
-               <Image source={require("../../assets/HomeIndicator.png")}/>
-          </View>
+               </View>
 
-          </>
+               <View style={{
+                    flex: 1,
+                    justifyContent: "space-between"
+               }}>
+                    <View style={{flex: 1}}>
+                         <View style={{
+                              marginVertical: 20,
+                              height: 1,
+                              backgroundColor: "#E2E2E2B2"
+                         }} />
+
+                         <View>
+                              <Text style={{
+                                   textAlign: "center",
+                                   color: "#181725",
+                                   fontFamily: "Inter_500Medium",
+                                   fontSize: 17
+                              }}>
+                                   Setup face lock
+                              </Text>
+                         </View>
+                         
+                         <View style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              paddingVertical: 40
+                         }}>
+                              <View style={{
+                                   alignItems: "center",
+                                   width: 125,
+                                   height: 125,
+                                   borderRadius: 63,
+                                   overflow: "hidden",
+                              }}>
+                                   <Image resizeMode="cover" style={{width: "100%", height: "100%"}} source={require("../../assets/profile.png")}/>
+                              </View>
+                         </View>
+                         
+                         <View style={{
+                              alignItems: "center",
+                         }}>
+                              <Text style={{
+                                   width: "80%",
+                                   fontFamily: "Inter_600SemiBold",
+                                   fontSize: 15,
+                                   lineHeight: 18,
+                                   color: "#068D68",
+                                   textAlign: "center"
+                              }}>
+                                   All Good!
+                              </Text>
+                              <Text style={{
+                                   width: "80%",
+                                   paddingVertical: 20,
+                                   textAlign: "center",
+                                   fontFamily: "Inter_400Regular",
+                                   fontSize: 13
+                              }}>
+                                   You can use face authentication to confirm making payments through the app.
+                              </Text>
+                         </View>
+                    </View>
+
+                    <View style={{
+                         padding: 10
+                    }}>
+                         <TouchableHighlight
+                              underlayColor="#2B4386"
+                              onPress={() => {}}
+                              style={{
+                                   backgroundColor: "#4B70D6",
+                                   height: 48,
+                                   justifyContent: "center",
+                                   alignItems: "center",
+                                   borderRadius: 20
+                              }}
+                              >
+                              <View>
+                                   <Text style={{ color: "#FFF"}}>
+                                        DONE
+                                   </Text>
+                              </View>
+                         </TouchableHighlight>
+                    </View>
+               </View>
+
+          </SafeAreaView>
           
      )
 }
