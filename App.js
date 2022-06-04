@@ -12,6 +12,9 @@ import SecureScreenOne from './src/screens/Secure_Screen_One';
 import SecureScreenTwo from './src/screens/Secure_Screen_Two';
 import SecureScreenThree from './src/screens/Secure_Screen_Three';
 import SecureScreenFour from './src/screens/Secure_Screen_Four';
+import SecureScreenEight from './src/screens/Secure_Screen_Eight';
+import SecureScreenNine from './src/screens/Secure_Screen_Nine';
+import SecureScreenTen from './src/screens/Secure_Screen_Ten';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -38,6 +41,7 @@ export default function App() {
       {/* <SecureScreenFour /> */}
       {/* <SecureScreenOne /> */}
       <SecureScreenTwo />
+      {/* <SecureScreenTen /> */}
       {/* <OrganizerApp /> */}
     </SafeAreaProvider>
   );
