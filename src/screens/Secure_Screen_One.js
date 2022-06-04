@@ -1,191 +1,187 @@
 import {View, Text, TouchableHighlight, Image} from "react-native"
+import { EvilIcons } from '@expo/vector-icons';
+import { SafeAreaView } from "react-native-safe-area-context";
+import MobileSecurityIcon from "../components/MobileSecurityIcon";
+import ColorPalette from "../constants/ColorPalette";
+import PadLockIcon from "../components/PadLockIcon";
+import FingerPrintIcon38 from "../components/FingerPrintIcon38";
+import FaceIdIcon36 from "../components/FaceIdIcon36";
 
 const SecureScreenOne = () => {
      return(
-          <>
-          <View style={{
-               marginTop: 40,
-               paddingLeft: 15,
-               alignItems: "center"
-          }}>
-               <Text style={{
-                    fontSize: 17,
-                    fontWeight: "400",
-
-               }}>
-                    Security
-               </Text>
-          </View>
-          <TouchableHighlight style={{
-               position: "absolute",
-               alignItems: "flex-end"
-          }}>
+          <SafeAreaView style={{flex: 1}}>
                <View style={{
-                    marginTop: 48,
-                    marginLeft: 380,
-               }}>
-                    <Image source={require("../../assets/close1.png")}/>
-               </View>
-          </TouchableHighlight>
-
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image source={require("../../assets/Vector10.png")}/>
-          </View>
-
-          <View style={{
-               marginLeft: 50,
-               marginTop: 30
-          }}>
-               <Image source={require("../../assets/Group.png")}/>
-               <View style={{
-                    position: "absolute"
+                    justifyContent: "center",
+                    alignItems: "center",
                }}>
                     <Text style={{
-                         color: "#4B70D6",
-                         marginLeft: 80,
-                         fontSize: 18
+                         fontSize: 17,
+                         fontFamily: "Inter_500Medium",
+                         textAlign: "center",
                     }}>
-                         Add an Extra layer of security
+                         Security
                     </Text>
+                    <View style={{
+                         position: "absolute",
+                         top: 0,
+                         right: 0,
+                         paddingRight: 10,
+                    }}>
+                         <EvilIcons name="close" size={24} color="black" />
+                    </View>
+               </View>
+
+               <View style={{
+                    marginVertical: 20,
+                    height: 1,
+                    width: "100%",
+                    backgroundColor: "#E2E2E2B2"
+               }} />
+
+               <View style={{
+                    flexDirection: "row",
+                    paddingHorizontal: 40,
+                    paddingVertical: 20,
+                    justifyContent: "space-between",
+                    alignItems: "flex-start"
+               }}>
+                    <MobileSecurityIcon />
+                    <View style={{
+                         flex: 1,
+                         marginLeft: 10
+                    }}>
+                         <Text style={{
+                              color: "#4B70D6",
+                              fontSize: 15,
+                              fontFamily: "Inter_500Medium",
+                              marginBottom: 10
+                         }}>
+                              Add an Extra layer of security
+                         </Text>
+                         <Text style={{
+                              color: "#484848",
+                              fontSize: 13,
+                              fontFamily: "Inter_400Regular"
+                         }}>
+                              make sure no one uses your account to make transcations without you knowing.
+                         </Text>
+                    </View>
+               </View>
+
+               <View style={{
+                    paddingHorizontal: 10,
+                    paddingVertical: 10
+               }}>
                     <Text style={{
-                         color: "#484848",
-                         marginLeft: 80,
+                         color: ColorPalette.textSecondaryColor,
                          fontSize: 15,
-                         marginRight: 25, 
-                         marginBottom: 30
-                    }}>
-                         make sure no one uses your account to make transactions with you knowing
-                    </Text>
-               </View>
-          </View>
-          <View style={{
-                    marginTop: 50,
-                    paddingLeft: 19
-               }}>
-                    <Text style={{
-                         color: "#7C7C7C",
-                         fontSize: 16
+                         fontFamily: "Inter_500Medium",
+                         lineHeight: 25
                     }}>
                          Select a preffered method for security
                     </Text>
-          </View>
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image style={{
-                    marginLeft: 46
-               }}source={require("../../assets/padlock1.png")}/>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 18,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#151522"
-                    }}>
-                         Pin
-               </Text>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 14,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#5B5B5B",
-                         paddingTop: 22
-                    }}>
-                         Lock suppliers credit with a pin
-               </Text>
+               </View>
 
                <View style={{
-                    alignItems: "center"
+                    paddingVertical: 10,
+                    paddingHorizontal: 10
                }}>
-                    <Image style={{
-                         alignItems: "center",
-                         marginTop: 25
-                    }}source={require("../../assets/Line.png")}/>
-               </View>
-          </View>
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image style={{
-                    marginLeft: 40
-               }}source={require("../../assets/face-id1.png")}/>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 18,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#151522"
+                    <View style={{
+                         flexDirection: "row",
+                         paddingHorizontal: 40,
+                         paddingVertical: 20
                     }}>
-                         Pin
-               </Text>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 14,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#5B5B5B",
-                         paddingTop: 22
-                    }}>
-                         Lock suppliers credit using your face
-               </Text>
+                         <PadLockIcon />
+                         <View style={{marginLeft: 20}}>
+                              <Text style={{
+                                        fontSize: 18,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#151522",
+                                        marginBottom: 5
+                                   }}>
+                                        Pin
+                              </Text>
+                              <Text style={{
+                                        fontSize: 12,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#5B5B5B",
+                                   }}>
+                                        Lock suppliers credit with a pin
+                              </Text>
+                         </View>
 
-               <View style={{
-                    alignItems: "center"
-               }}>
-                    <Image style={{
-                         alignItems: "center",
-                         marginTop: 25
-                    }}source={require("../../assets/Line.png")}/>
-               </View>
-          </View>
-          <View style={{
-               marginTop: 20
-          }}>
-               <Image style={{
-                    marginLeft: 40
-               }}source={require("../../assets/smartphone1.png")}/>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 18,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#151522"
-                    }}>
-                         Fingerprint
-               </Text>
-               <Text style={{
-                         position: "absolute",
-                         fontSize: 14,
-                         paddingLeft: 110,
-                         fontWeight: "400",
-                         color: "#5B5B5B",
-                         paddingTop: 22
-                    }}>
-                         Lock suppliers credit with fingerprint
-               </Text>
-               <View style={{
-                    alignItems: "center"
-               }}>
-                    <Image style={{
-                         alignItems: "center",
-                         marginTop: 25
-                    }}source={require("../../assets/Line.png")}/>
-               </View>
-               
-          </View>
+                    </View>
+                    <View style={{
+                         marginVertical: 10,
+                         height: 1,
+                         width: "100%",
+                         backgroundColor: "#E4E4E499"
+                    }} />
 
-          <View style={{
-               alignItems: "center"
-          }}>
-               <Image style={{
-                         alignItems: "center",
-                         marginTop: 160
-                    }}source={require("../../assets/HomeIndicator.png")}/>
-          </View>
-          </>
+                    <View style={{
+                         flexDirection: "row",
+                         paddingHorizontal: 40,
+                         paddingVertical: 20
+                    }}>
+                         <FaceIdIcon36 />
+                         <View style={{marginLeft: 20}}>
+                              <Text style={{
+                                        fontSize: 18,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#151522",
+                                        marginBottom: 5
+                                   }}>
+                                        Face unlock
+                              </Text>
+                              <Text style={{
+                                        fontSize: 12,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#5B5B5B",
+                                   }}>
+                                   Lock suppliers credit using your face
+                              </Text>
+                         </View>
+
+                    </View>
+                    <View style={{
+                         marginVertical: 10,
+                         height: 1,
+                         width: "100%",
+                         backgroundColor: "#E4E4E499"
+                    }} />
+
+                    <View style={{
+                         flexDirection: "row",
+                         paddingHorizontal: 40,
+                         paddingVertical: 20
+                    }}>
+                         <FingerPrintIcon38 />
+                         <View style={{marginLeft: 20}}>
+                              <Text style={{
+                                        fontSize: 18,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#151522",
+                                        marginBottom: 5
+                                   }}>
+                                        Fingerprint
+                              </Text>
+                              <Text style={{
+                                        fontSize: 12,
+                                        fontFamily: "Inter_400Regular",
+                                        color: "#5B5B5B",
+                                   }}>
+                                   Lock suppliers credit using fingerprint
+                              </Text>
+                         </View>
+                    </View>
+                    <View style={{
+                         marginVertical: 10,
+                         height: 1,
+                         width: "100%",
+                         backgroundColor: "#E4E4E499"
+                    }} />
+               </View>
+          </SafeAreaView>
           
      )
 }
