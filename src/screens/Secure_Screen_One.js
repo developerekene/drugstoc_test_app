@@ -132,7 +132,7 @@ const SecureScreenOne = ({ navigation }) => {
                          }} />
 
                          <TouchableHighlight underlayColor="rgba(116, 116, 116, 0.2)" onPress={() => {
-                              
+                              navigation.navigate("SecureScreenEight")
                          }}>
                               <View style={{
                                    flexDirection: "row",

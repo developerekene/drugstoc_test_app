@@ -49,14 +49,9 @@ export default function App() {
           {/* <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFF" }}> */}
 
             {/* <SecureScreenOne /> */}
-            {/* <SecureScreenFive /> */}
-            {/* <SecureScreenFour /> */}
-            {/* <SecureScreenTen /> */}
             {/* <SecureScreenEight /> */}
             {/* <SecureScreenNine /> */}
-            {/* <SecureScreenSix/> */}
-            {/* <SecureScreenSeven /> */}
-            {/* <SecureScreenNine /> */}
+            {/* <SecureScreenTen /> */}
 
 
 
@@ -115,6 +110,39 @@ export default function App() {
               <Stack.Screen name="SecureScreenFive" component={SecureScreenFive} 
                 options={{
                   headerShown: false
+                }}/>
+              
+              <Stack.Screen name="SecureScreenSix" component={SecureScreenSix} 
+                options={{
+                  headerShown: false
+                }}/>
+              
+              <Stack.Screen name="SecureScreenSeven" component={SecureScreenSeven} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenEight" component={SecureScreenEight} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={true} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenNine" component={SecureScreenNine} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={false} back={false} />
+                  }
+                }}/>
+              
+              <Stack.Screen name="SecureScreenTen" component={SecureScreenTen} 
+                options={{
+                  header: ({navigation}) => {
+                    return <GoBack navigation={navigation} title="Security" close={true} back={false} />
+                  }
                 }}/>
             </Stack.Navigator>
           {/* <OrganizerApp /> */}

@@ -4,6 +4,11 @@ import FaceIdIcon80 from "../components/FaceIdIcon80"
 
 
 const SecureScreenFive = ({ navigation }) => {
+
+     setTimeout(() => {
+          navigation.navigate("SecureScreenSix")
+     }, 5000);
+
      return(
           <ImageBackground source={require("../../assets/jason-yoder.png")} resizeMode="cover"
                style={{
@@ -36,7 +41,9 @@ const SecureScreenFive = ({ navigation }) => {
                     }}>
                          <TouchableHighlight
                               underlayColor="#00000010"
-                              onPress={() => {}}
+                              onPress={() => {
+                                   navigation.navigate("SecureScreenFour")
+                              }}
                               style={{
                                    borderColor: "#fff",
                                    borderWidth: 3,
