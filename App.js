@@ -32,10 +32,10 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="auto" />
-      <DrugstockCreditThree />
+      {/* <DrugstockCreditThree /> */}
       {/* <DrugstockCreditTwo /> */}
       {/* <DrugstockCreditOne /> */}
-      {/* <SecureScreenFour /> */}
+      <SecureScreenFour />
       {/* <OrganizerApp /> */}
     </SafeAreaProvider>
   );
